@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var appRouter: IAppRouter!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -20,6 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.backgroundColor = UIColor.whiteColor()
             window.makeKeyAndVisible()
         self.window = window
+        
+        let vc = UIViewController()
+        let nc = UINavigationController(rootViewController:vc)
+        window.rootViewController = nc
+        
+        appRouter = AppRouter.sharedInstance
+        if (AuthManager.sharedManager.canAuthorize) {
+            appRouter.presentModule(Module.Home,parameters: [:])
+        } else {
+            appRouter.presentModule(Module.Home, parameters: [:])
+        }
         
         return true
     }

@@ -38,5 +38,9 @@ protocol IService {
 }
 
 class Service: IService {
-
+    private let authManager: IAuthManager
+    
+    init(authManager: IAuthManager) {
+        self.authManager = authManager
+    }
 }

@@ -99,30 +99,20 @@ extension AppRouter {
     private class func createAppRouter() -> IAppRouter {
         let vc = UIApplication.sharedApplication().delegate?.window??.rootViewController!
         
-        let modules : [String:(appRouter:IAppRouter)->IModule] = [ : ]
-//            modules[Module.ToDoList.routePath] = {(appRouter:IAppRouter) in ToDoListModule(appRouter:appRouter)}
-        
-//            Module.ToDoList.routePath : {(appRouter:IAppRouter) in ToDoListModule(appRouter:appRouter)},
-//            Module.CreateTodo.routePath : {(appRouter: IAppRouter) in CreateTodoModule(appRouter: appRouter)},
-//            Module.EditTodo.routePath : {(appRouter: IAppRouter) in EditTodoModule(appRouter: appRouter)},
-//            Module.Profile.routePath : {(appRouter: IAppRouter) in ProfileModule(appRouter: appRouter)},
-//            Module.Login.routePath : {(appRouter: IAppRouter) in LoginModule(appRouter: appRouter)},
-//            Module.SignUp.routePath : {(appRouter: IAppRouter) in SignUpModule(appRouter: appRouter)}
+        var modules : [String:(appRouter:IAppRouter)->IModule] = [ : ]
+            modules[Module.Home.routePath] = {(appRouter:IAppRouter) in HomeModule(appRouter:appRouter)}
         
         let assembler = Assembler()
-//            assembler.applyAssemblies(
-//                [CommonAssembly()]
-//            )
-//            assembler.applyAssemblies(
-//                [
-//                    ToDoListAssembly(),
-//                    CreateTodoAssembly(),
-//                    EditTodoAssembly(),
-//                    ProfileAssembly(),
-//                    LoginAssembly(),
-//                    SignUpAssembly()
-//                ]
-//            )
+            assembler.applyAssemblies(
+                [
+                    CommonAssembly()
+                ]
+            )
+            assembler.applyAssemblies(
+                [
+                    HomeAssembly()
+                ]
+            )
         return AppRouter(rootVC: vc!, navigationController:getNavigationController(), assembler:assembler, modules: modules)
     }
     
