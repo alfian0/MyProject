@@ -5,6 +5,9 @@ platform :ios, '8.0'
 
 def common_pods
     pod 'Swinject', '~> 1.1.0'
+    pod 'Alamofire', '~> 3.4.1'
+    pod 'ObjectMapper', '~> 1.3.0'
+    pod 'AlamofireObjectMapper', '~> 3.0'
 end
 
 def common_test_pods

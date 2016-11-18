@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlamofireObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MyProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7295FCBCDA698AFA42BFA0029BA23492</key>
+		<key>022544E60F0DC59C0B675C9522D21487</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>744822C0B428FE5F1B14FF6C9B4BDFD2</key>
+		<key>5FF1A4CCDF07D5E2AF6B245CD724A1A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D3C06AB9AC2DFFD96B9323F3E830A64</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EEA8711E3F3CA58AD126A81036BEE2AA</key>
+		<key>A7C428CA427B0BCB07C28EF5328E85EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C5CBCAA97E951CC882334464FBDF983D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB64B3E502CAF2A4F683C38DFFD83D85</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBD082A0D35F7917EAB9DD9D3CCA9976</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -13,7 +13,7 @@ protocol IHomeView : class {
 }
 
 class HomeView: UIViewController, IHomeView {
-
+ 
 	var presenter: IHomePresenter!
 
     init(){
@@ -26,6 +26,15 @@ class HomeView: UIViewController, IHomeView {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Home"
+        
+        self.automaticallyAdjustsScrollViewInsets = true
+        self.edgesForExtendedLayout = .None
+        
+        let navigationBar: UINavigationBar = (self.navigationController?.navigationBar)!
+            navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+            navigationBar.shadowImage = UIImage()
+            navigationBar.backgroundColor = UIColor.clearColor()
     }
-
 }
