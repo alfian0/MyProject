@@ -9,7 +9,9 @@
 import UIKit
 
 protocol IHomeView : class {
-
+    func showLoading()
+    func hideLoading()
+    func failedToFetch(error: NSError)
 }
 
 class HomeView: UIViewController, IHomeView {
@@ -36,5 +38,19 @@ class HomeView: UIViewController, IHomeView {
             navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
             navigationBar.shadowImage = UIImage()
             navigationBar.backgroundColor = UIColor.clearColor()
+        
+        self.presenter.doGetBucket(100)
+    }
+    
+    func showLoading() {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    }
+    
+    func hideLoading() {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    }
+    
+    func failedToFetch(error: NSError) {
+        self.showErrorAlert(error)
     }
 }

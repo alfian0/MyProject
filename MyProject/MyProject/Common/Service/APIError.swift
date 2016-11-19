@@ -31,7 +31,10 @@ extension NSError {
     static func errorWithCode(code: Int?, message: String?) -> NSError {
         let codeToUse = code ?? -999
         let messageToUse = message ?? self.defaultMessage(codeToUse)
-        return NSError(domain: NSBundle.mainBundle().bundleIdentifier!, code: codeToUse, userInfo: [NSLocalizedDescriptionKey : messageToUse])
+        guard let domain: String = NSBundle.mainBundle().bundleIdentifier else {
+            return NSError(domain: "", code: codeToUse, userInfo: [NSLocalizedDescriptionKey : messageToUse])
+        }
+        return NSError(domain: domain, code: codeToUse, userInfo: [NSLocalizedDescriptionKey : messageToUse])
     }
     
     static func defaultMessage(code: Int) -> String {

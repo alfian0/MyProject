@@ -34,6 +34,12 @@
 		80731D3F1DDF255700AE96E5 /* CommonAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80731D3E1DDF255700AE96E5 /* CommonAssembly.swift */; };
 		80731D451DDF2D1000AE96E5 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80731D441DDF2D1000AE96E5 /* HomeView.xib */; };
 		808CFD581DDF45DA00C29882 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808CFD571DDF45DA00C29882 /* APIError.swift */; };
+		808CFD5B1DE04C6000C29882 /* Buckets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808CFD5A1DE04C6000C29882 /* Buckets.swift */; };
+		808CFD5E1DE075C700C29882 /* Buckets.json in Resources */ = {isa = PBXBuildFile; fileRef = 808CFD5D1DE075C700C29882 /* Buckets.json */; };
+		808CFD621DE0794B00C29882 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808CFD611DE0794B00C29882 /* User.swift */; };
+		808CFD641DE080AA00C29882 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808CFD631DE080AA00C29882 /* Links.swift */; };
+		808CFD661DE084AF00C29882 /* Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808CFD651DE084AF00C29882 /* Access.swift */; };
+		808CFD691DE0897E00C29882 /* GetJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808CFD681DE0897E00C29882 /* GetJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +96,12 @@
 		80731D3E1DDF255700AE96E5 /* CommonAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAssembly.swift; sourceTree = "<group>"; };
 		80731D441DDF2D1000AE96E5 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		808CFD571DDF45DA00C29882 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		808CFD5A1DE04C6000C29882 /* Buckets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buckets.swift; sourceTree = "<group>"; };
+		808CFD5D1DE075C700C29882 /* Buckets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Buckets.json; sourceTree = "<group>"; };
+		808CFD611DE0794B00C29882 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		808CFD631DE080AA00C29882 /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		808CFD651DE084AF00C29882 /* Access.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Access.swift; sourceTree = "<group>"; };
+		808CFD681DE0897E00C29882 /* GetJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetJSON.swift; sourceTree = "<group>"; };
 		8BE975DB82BB3A6A298FA758 /* Pods-MyProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MyProjectUITests/Pods-MyProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A210C7A1850889D6697413B6 /* Pods-MyProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProject.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MyProject/Pods-MyProject.release.xcconfig"; sourceTree = "<group>"; };
 		CCF8D5D722A3F1B7A8FC10E9 /* Pods_MyProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +195,9 @@
 			children = (
 				8071EDEA1DDF13D00082BA50 /* Base */,
 				8071EDF01DDF13D00082BA50 /* Extension */,
+				808CFD671DE0894A00C29882 /* Helper */,
+				808CFD591DE04C4000C29882 /* Model */,
+				808CFD5C1DE0759100C29882 /* Resources */,
 				8071EDF21DDF13D00082BA50 /* Service */,
 			);
 			path = Common;
@@ -239,6 +254,33 @@
 				80731D441DDF2D1000AE96E5 /* HomeView.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		808CFD591DE04C4000C29882 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				808CFD5A1DE04C6000C29882 /* Buckets.swift */,
+				808CFD611DE0794B00C29882 /* User.swift */,
+				808CFD631DE080AA00C29882 /* Links.swift */,
+				808CFD651DE084AF00C29882 /* Access.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		808CFD5C1DE0759100C29882 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				808CFD5D1DE075C700C29882 /* Buckets.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		808CFD671DE0894A00C29882 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				808CFD681DE0897E00C29882 /* GetJSON.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		BCDF8D62B8D2AF7283056E9A /* Frameworks */ = {
@@ -380,6 +422,7 @@
 				80731D451DDF2D1000AE96E5 /* HomeView.xib in Resources */,
 				8071EDC31DDF11BA0082BA50 /* Assets.xcassets in Resources */,
 				8071EDC11DDF11BA0082BA50 /* Main.storyboard in Resources */,
+				808CFD5E1DE075C700C29882 /* Buckets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,16 +571,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				8071EDF81DDF13D00082BA50 /* IAppRouter.swift in Sources */,
+				808CFD691DE0897E00C29882 /* GetJSON.swift in Sources */,
 				80731D3B1DDF244400AE96E5 /* HomeView.swift in Sources */,
 				80731D381DDF244400AE96E5 /* HomeInteractor.swift in Sources */,
 				8071EDBE1DDF11BA0082BA50 /* ViewController.swift in Sources */,
+				808CFD641DE080AA00C29882 /* Links.swift in Sources */,
 				80731D371DDF244400AE96E5 /* HomeAssembly.swift in Sources */,
 				8071EDBC1DDF11BA0082BA50 /* AppDelegate.swift in Sources */,
 				8071EDF61DDF13D00082BA50 /* AppRouter.swift in Sources */,
 				80731D391DDF244400AE96E5 /* HomeModule.swift in Sources */,
+				808CFD621DE0794B00C29882 /* User.swift in Sources */,
 				8071EDFB1DDF13D00082BA50 /* UIViewControllerExtension.swift in Sources */,
+				808CFD661DE084AF00C29882 /* Access.swift in Sources */,
 				80731D3F1DDF255700AE96E5 /* CommonAssembly.swift in Sources */,
 				80731D3D1DDF244400AE96E5 /* HomeWireFrame.swift in Sources */,
+				808CFD5B1DE04C6000C29882 /* Buckets.swift in Sources */,
 				8071EDFC1DDF13D00082BA50 /* Service.swift in Sources */,
 				80731D3A1DDF244400AE96E5 /* HomePresenter.swift in Sources */,
 				8071EDFA1DDF13D00082BA50 /* Module.swift in Sources */,

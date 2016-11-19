@@ -4,20 +4,23 @@ PODS:
     - Alamofire (~> 3.2)
     - ObjectMapper (~> 1.0)
   - ObjectMapper (1.3.0)
+  - R.swift (0.13.0)
   - Swinject (1.1.5)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4.1)
   - AlamofireObjectMapper (~> 3.0)
   - ObjectMapper (~> 1.3.0)
+  - R.swift (~> 0.13.0)
   - Swinject (~> 1.1.0)
 
 SPEC CHECKSUMS:
   Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
   AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
   ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
+  R.swift: 07e0796d2b4d50b875eb7de9bd8e6193e15c6434
   Swinject: 49b2b23850829e0a6074681264dcb1aa64c0dbca
 
-PODFILE CHECKSUM: 417e9d9d85899b5eeb267863b86d91d30540dd3e
+PODFILE CHECKSUM: e9c429b13caeff847937ccc8949f8349f87749b1
 
 COCOAPODS: 1.0.1

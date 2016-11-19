@@ -12,12 +12,13 @@ import Swinject
 class HomeAssembly: AssemblyType {
 
     func assemble(container: Container) {
-        container.register(IHomeInteractor.self) { _ in
-            HomeInteractor()
+        container.register(IHomeInteractor.self) { r in
+            let service = r.resolve(IService.self)!
+            return HomeInteractor(service: service)
         }
 
         container.register(IHomeWireFrame.self) { (r, appRouter: IAppRouter) in
-            HomeWireFrame(appRouter: appRouter)
+            return HomeWireFrame(appRouter: appRouter)
         }
 
         container.register(IHomePresenter.self) { (r, view: IHomeView, viewModel:HomeViewModel, appRouter: IAppRouter) in

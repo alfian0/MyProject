@@ -8,6 +8,7 @@ def common_pods
     pod 'Alamofire', '~> 3.4.1'
     pod 'ObjectMapper', '~> 1.3.0'
     pod 'AlamofireObjectMapper', '~> 3.0'
+    pod 'R.swift', '~> 0.13.0'
 end
 
 def common_test_pods

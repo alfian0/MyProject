@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 typealias NetworkFailureHandler = (NSHTTPURLResponse?, AnyObject?, NSError?) -> Void
 
@@ -34,7 +35,7 @@ class AuthManager: IAuthManager {
 }
 
 protocol IService {
-
+    func getBuckets(id: Int, success: (BucketsResponse?) -> Void, failure: NetworkFailureHandler)
 }
 
 class Service: IService {
@@ -42,5 +43,24 @@ class Service: IService {
     
     init(authManager: IAuthManager) {
         self.authManager = authManager
+    }
+    
+    func getBuckets(id: Int, success: (BucketsResponse?) -> Void, failure: NetworkFailureHandler) {
+        let url = SERVER_URL + "/buckets/" + "\(id)"
+        Alamofire.request(.GET, url, parameters: [:], encoding: ParameterEncoding.JSON, headers: authManager.authHeaders).responseString { response in
+            guard let jsonString = response.result.value else {
+                #if DEVELOPMENT
+                    guard let jsonString = GetJSON.fromFile("Buckets") else {
+                        return
+                    }
+                    success(BucketsResponse(JSONString: jsonString))
+                #else
+                    failure(response.response, response.data, response.result.error)
+                #endif
+                return
+            }
+            success(BucketsResponse(JSONString: jsonString))
+        }
+        
     }
 }

@@ -9,9 +9,9 @@
 import Foundation
 
 #if DEVELOPMENT
-let SERVER_URL = "http://dev.server.com/api/"
+let SERVER_URL = "https://api.dribbble.com"
 let API_TOKEN = "DI2023409jf90ew"
 #else
-let SERVER_URL = "http://prod.server.com/api/"
+let SERVER_URL = "https://api.dribbble.com"
 let API_TOKEN = "71a629j0f090232"
 #endif
