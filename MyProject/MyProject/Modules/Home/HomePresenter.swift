@@ -9,7 +9,8 @@ import Foundation
 
 protocol IHomePresenter: class {
     func doGetBucket(id: Int)
-    func failedToFetch(error: NSError)
+    func successGetBucket()
+    func failedGetBucket(error: NSError)
 }
 
 class HomePresenter : IHomePresenter {
@@ -30,7 +31,11 @@ class HomePresenter : IHomePresenter {
         self.interactor.getBuckets(id)
     }
     
-    func failedToFetch(error: NSError) {
+    func successGetBucket() {
+        self.view.hideLoading()
+    }
+    
+    func failedGetBucket(error: NSError) {
         self.view.hideLoading()
         self.view.failedToFetch(error)
     }

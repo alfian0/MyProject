@@ -26,7 +26,10 @@ class AuthManager: IAuthManager {
     }
     
     var authHeaders: [String : String] {
-        return ["Authorization" : "Bearer " + token]
+        return [
+            "Authorization" : "Bearer " + token,
+            "Content-Type" : "application/json"
+        ]
     }
     
     var canAuthorize: Bool {
@@ -43,11 +46,21 @@ class Service: IService {
     
     init(authManager: IAuthManager) {
         self.authManager = authManager
+        self.authManager.saveToken("633d789aef08471e4d050f89ee403e65db0ffa03b48c4e65d6bd9d955d943b4b")
     }
     
     func getBuckets(id: Int, success: (BucketsResponse?) -> Void, failure: NetworkFailureHandler) {
-        let url = SERVER_URL + "/buckets/" + "\(id)"
-        Alamofire.request(.GET, url, parameters: [:], encoding: ParameterEncoding.JSON, headers: authManager.authHeaders).responseString { response in
+        let url = SERVER_URL + "/v1/buckets/" + "\(id)"
+        Alamofire
+            .request(
+                .GET,
+                url,
+                parameters: [:],
+                encoding: ParameterEncoding.URLEncodedInURL,
+                headers: authManager.authHeaders
+            )
+            .validate()
+            .responseString { response in
             guard let jsonString = response.result.value else {
                 #if DEVELOPMENT
                     guard let jsonString = GetJSON.fromFile("Buckets") else {

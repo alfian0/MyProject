@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideOutMenu
 
 protocol IHomeView : class {
     func showLoading()
@@ -14,7 +15,7 @@ protocol IHomeView : class {
     func failedToFetch(error: NSError)
 }
 
-class HomeView: UIViewController, IHomeView {
+class HomeView: ContainerController, IHomeView {
  
 	var presenter: IHomePresenter!
 
@@ -29,17 +30,17 @@ class HomeView: UIViewController, IHomeView {
 	override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Home"
+        self.delegate = self
+        self.navigationController?.navigationBarHidden = true
+        self.presenter.doGetBucket(11345)
         
-        self.automaticallyAdjustsScrollViewInsets = true
-        self.edgesForExtendedLayout = .None
+//        self.automaticallyAdjustsScrollViewInsets = true
+//        self.edgesForExtendedLayout = .None
         
-        let navigationBar: UINavigationBar = (self.navigationController?.navigationBar)!
-            navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-            navigationBar.shadowImage = UIImage()
-            navigationBar.backgroundColor = UIColor.clearColor()
-        
-        self.presenter.doGetBucket(100)
+//        let navigationBar: UINavigationBar = (self.navigationController?.navigationBar)!
+//            navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//            navigationBar.shadowImage = UIImage()
+//            navigationBar.backgroundColor = UIColor.clearColor()
     }
     
     func showLoading() {
@@ -52,5 +53,19 @@ class HomeView: UIViewController, IHomeView {
     
     func failedToFetch(error: NSError) {
         self.showErrorAlert(error)
+    }
+}
+
+extension HomeView: ISlideOutMenu {
+    func setCenterViewController() -> ICenterViewController {
+        return CenterView()
+    }
+    
+    func setLeftViewController() -> UIViewController? {
+        return UIViewController()
+    }
+    
+    func setRightViewController() -> UIViewController? {
+        return nil
     }
 }

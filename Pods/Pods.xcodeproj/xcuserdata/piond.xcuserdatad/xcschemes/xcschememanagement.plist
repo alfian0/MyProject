@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SlideOutMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Swinject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>022544E60F0DC59C0B675C9522D21487</key>
+		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5FF1A4CCDF07D5E2AF6B245CD724A1A1</key>
+		<key>4C518EC27BC6115F164C1D8B0880C71A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>684374E1AF516942EAA3C8CDBE0C4570</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7C428CA427B0BCB07C28EF5328E85EC</key>
+		<key>7B094DBE293C04956AD08EB643F3533D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5CBCAA97E951CC882334464FBDF983D</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB64B3E502CAF2A4F683C38DFFD83D85</key>
+		<key>9502FB01641FBABB78522037E882757B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FBD082A0D35F7917EAB9DD9D3CCA9976</key>
+		<key>FA044F4F8D53D159DA2826E98A2B9C2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD914E56886121129AC421DADBD41EA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

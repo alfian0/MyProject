@@ -10,6 +10,17 @@ import Foundation
 import ObjectMapper
 
 struct BucketsResponse: Mappable {
+    var buckets: BucketsModel?
+    var error: APIError?
+    
+    init?(_ map: Map) {}
+    
+    mutating func mapping(map: Map) {
+        buckets <- map
+        error <- map["error"]
+    }
+}
+struct BucketsModel: Mappable {
     var id: Int?
     var name: String?
     var description: String?
@@ -17,7 +28,6 @@ struct BucketsResponse: Mappable {
     var createdAt: String?
     var updatedAt: String?
     var user: UserModel?
-    var error: APIError?
     
     init?(_ map: Map) {}
     
@@ -29,6 +39,5 @@ struct BucketsResponse: Mappable {
         createdAt <- map["created_at"]
         updatedAt <- map["updated_at"]
         user <- map["user"]
-        error <- map["error"]
     }
 }

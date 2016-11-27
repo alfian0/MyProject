@@ -33,6 +33,7 @@
 		80731D3D1DDF244400AE96E5 /* HomeWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80731D361DDF244400AE96E5 /* HomeWireFrame.swift */; };
 		80731D3F1DDF255700AE96E5 /* CommonAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80731D3E1DDF255700AE96E5 /* CommonAssembly.swift */; };
 		80731D451DDF2D1000AE96E5 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80731D441DDF2D1000AE96E5 /* HomeView.xib */; };
+		807D11631DEB5252002622E1 /* CenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D11621DEB5252002622E1 /* CenterView.swift */; };
 		808CFD581DDF45DA00C29882 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808CFD571DDF45DA00C29882 /* APIError.swift */; };
 		808CFD5B1DE04C6000C29882 /* Buckets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808CFD5A1DE04C6000C29882 /* Buckets.swift */; };
 		808CFD5E1DE075C700C29882 /* Buckets.json in Resources */ = {isa = PBXBuildFile; fileRef = 808CFD5D1DE075C700C29882 /* Buckets.json */; };
@@ -95,6 +96,7 @@
 		80731D361DDF244400AE96E5 /* HomeWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWireFrame.swift; sourceTree = "<group>"; };
 		80731D3E1DDF255700AE96E5 /* CommonAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAssembly.swift; sourceTree = "<group>"; };
 		80731D441DDF2D1000AE96E5 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		807D11621DEB5252002622E1 /* CenterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterView.swift; sourceTree = "<group>"; };
 		808CFD571DDF45DA00C29882 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		808CFD5A1DE04C6000C29882 /* Buckets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buckets.swift; sourceTree = "<group>"; };
 		808CFD5D1DE075C700C29882 /* Buckets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Buckets.json; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				80731D351DDF244400AE96E5 /* HomeViewModel.swift */,
 				80731D361DDF244400AE96E5 /* HomeWireFrame.swift */,
 				80731D441DDF2D1000AE96E5 /* HomeView.xib */,
+				807D11621DEB5252002622E1 /* CenterView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				8071EDD41DDF11BA0082BA50 /* Frameworks */,
 				8071EDD51DDF11BA0082BA50 /* Resources */,
 				1BB8468DF0C855393FC88998 /* [CP] Copy Pods Resources */,
+				F0CD490AB6B4C2B982074B82 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -485,7 +489,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		3B325BE8F72BF2FBC19A6F6A /* [CP] Check Pods Manifest.lock */ = {
@@ -500,7 +504,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4AFB0DFC2FB843903A9A8549 /* [CP] Embed Pods Frameworks */ = {
@@ -560,7 +564,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0CD490AB6B4C2B982074B82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-MyProjectUITests/Pods-MyProjectUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -577,6 +596,7 @@
 				8071EDBE1DDF11BA0082BA50 /* ViewController.swift in Sources */,
 				808CFD641DE080AA00C29882 /* Links.swift in Sources */,
 				80731D371DDF244400AE96E5 /* HomeAssembly.swift in Sources */,
+				807D11631DEB5252002622E1 /* CenterView.swift in Sources */,
 				8071EDBC1DDF11BA0082BA50 /* AppDelegate.swift in Sources */,
 				8071EDF61DDF13D00082BA50 /* AppRouter.swift in Sources */,
 				80731D391DDF244400AE96E5 /* HomeModule.swift in Sources */,

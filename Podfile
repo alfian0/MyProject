@@ -9,6 +9,7 @@ def common_pods
     pod 'ObjectMapper', '~> 1.3.0'
     pod 'AlamofireObjectMapper', '~> 3.0'
     pod 'R.swift', '~> 0.13.0'
+    pod 'SlideOutMenu'
 end
 
 def common_test_pods
