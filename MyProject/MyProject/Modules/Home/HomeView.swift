@@ -16,7 +16,6 @@ protocol IHomeView : class {
 }
 
 class HomeView: ContainerController, IHomeView {
- 
 	var presenter: IHomePresenter!
 
     init(){
@@ -58,7 +57,9 @@ class HomeView: ContainerController, IHomeView {
 
 extension HomeView: ISlideOutMenu {
     func setCenterViewController() -> ICenterViewController {
-        return CenterView()
+        let cv = CenterView()
+            cv.presenter = self.presenter
+        return cv
     }
     
     func setLeftViewController() -> UIViewController? {
@@ -66,6 +67,8 @@ extension HomeView: ISlideOutMenu {
     }
     
     func setRightViewController() -> UIViewController? {
-        return nil
+        let rv = RightView()
+            rv.presenter = self.presenter
+        return rv
     }
 }

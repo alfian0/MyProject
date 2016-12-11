@@ -10,6 +10,7 @@ import UIKit
 import SlideOutMenu
 
 class CenterView: UIViewController, ICenterViewController {
+    var presenter: IHomePresenter!
     var delegate: ISlideOutMenuDelegate!
     
     override func viewDidLoad() {
@@ -17,10 +18,15 @@ class CenterView: UIViewController, ICenterViewController {
         
         self.title = "Home"
         self.view.backgroundColor = UIColor.whiteColor()
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Organize, target: self, action: #selector(self.actionButton(_:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Organize, target: self, action: #selector(self.actionButtonL(_:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(self.actionButtonR(_:)))
     }
     
-    @objc func actionButton(sender: UIButton) {
+    @objc func actionButtonL(sender: UIButton) {
         self.delegate.toggleLeftPanel()
+    }
+    
+    @objc func actionButtonR(sender: UIButton) {
+        self.delegate.toggleRightPanel()
     }
 }

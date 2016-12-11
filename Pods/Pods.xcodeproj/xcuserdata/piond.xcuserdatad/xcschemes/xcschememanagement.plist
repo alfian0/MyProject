@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ParallaxHeaderView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MyProject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,22 +52,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>09D7359226620B45F106F3F5D30CBF74</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1529C42DA64635913E1898896848B484</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C518EC27BC6115F164C1D8B0880C71A</key>
+		<key>57A8E365F7D53ED7ABFA380DEFEEFDA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>684374E1AF516942EAA3C8CDBE0C4570</key>
+		<key>59EB126970CF5529269AD9B64D6161D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7B094DBE293C04956AD08EB643F3533D</key>
+		<key>70888355045E37F1AF238BF3053901E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>82D9DEF9E58574A000B59072A44A6CD8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,16 +93,6 @@
 			<true/>
 		</dict>
 		<key>9502FB01641FBABB78522037E882757B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FA044F4F8D53D159DA2826E98A2B9C2C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD914E56886121129AC421DADBD41EA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -11,6 +11,8 @@ protocol IHomePresenter: class {
     func doGetBucket(id: Int)
     func successGetBucket()
     func failedGetBucket(error: NSError)
+    func successAddEvent()
+    func failedAddEvent(error: NSError)
 }
 
 class HomePresenter : IHomePresenter {
@@ -37,6 +39,14 @@ class HomePresenter : IHomePresenter {
     
     func failedGetBucket(error: NSError) {
         self.view.hideLoading()
+        self.view.failedToFetch(error)
+    }
+    
+    func successAddEvent() {
+        self.view.failedToFetch(NSError.errorWithCode(200, message: "Success add event."))
+    }
+    
+    func failedAddEvent(error: NSError) {
         self.view.failedToFetch(error)
     }
 }
