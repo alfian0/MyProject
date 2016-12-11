@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  MyProject
+
+  Created by alfian on 11/12/2016.
+  Copyright © 2016 alfian.official.organization. All rights reserved.
+*/
+
+"KEY" = "CONTENT";
+"labelText" = "Localization text";
+"buttonTitle" = "Working ?";
+"imageName" = "England";

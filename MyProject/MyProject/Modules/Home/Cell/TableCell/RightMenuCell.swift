@@ -20,6 +20,9 @@ class RightMenuCell: UITableViewCell {
         // Initialization code
         self.titleLabel.font = R.font.roundedEleganceNewRegular(size: 14)
         self.titleLabel.text = "Configure the view for the selected state"
+        
+        let buttonTitle = Localization.instance.getLocalizationBy("en", key: "buttonTitle")
+        self.clickMeButton.setTitle(buttonTitle, forState: .Normal)
         self.clickMeButton.addTarget(self, action: #selector(self.setClickMeAction(_:)), forControlEvents: .TouchUpInside)
     }
 

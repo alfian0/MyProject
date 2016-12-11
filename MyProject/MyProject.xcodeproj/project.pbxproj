@@ -13,6 +13,8 @@
 		80344F1A1DFD921A00A34166 /* Buckets.json in Resources */ = {isa = PBXBuildFile; fileRef = 80344F181DFD921A00A34166 /* Buckets.json */; };
 		80344F1D1DFD935400A34166 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80344F1C1DFD935400A34166 /* R.generated.swift */; };
 		80344F1F1DFD9B6900A34166 /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80344F1E1DFD9B4A00A34166 /* Rounded_Elegance.ttf */; };
+		80344F271DFDA66900A34166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80344F291DFDA66900A34166 /* Localizable.strings */; };
+		80344F2F1DFDA87100A34166 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80344F2E1DFDA87100A34166 /* Localization.swift */; };
 		8055CF8A1DED389600AF6A17 /* RightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055CF891DED389600AF6A17 /* RightView.swift */; };
 		8055CF911DED395D00AF6A17 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8055CF901DED395D00AF6A17 /* HeaderView.xib */; };
 		8055CF931DED396900AF6A17 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055CF921DED396900AF6A17 /* HeaderView.swift */; };
@@ -77,6 +79,12 @@
 		80344F181DFD921A00A34166 /* Buckets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Buckets.json; sourceTree = "<group>"; };
 		80344F1C1DFD935400A34166 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		80344F1E1DFD9B4A00A34166 /* Rounded_Elegance.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rounded_Elegance.ttf; sourceTree = "<group>"; };
+		80344F281DFDA66900A34166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		80344F2A1DFDA67400A34166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		80344F2B1DFDA6AB00A34166 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Main.strings; sourceTree = "<group>"; };
+		80344F2C1DFDA6AB00A34166 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		80344F2D1DFDA6AB00A34166 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		80344F2E1DFDA87100A34166 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		8055CF891DED389600AF6A17 /* RightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightView.swift; sourceTree = "<group>"; };
 		8055CF901DED395D00AF6A17 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		8055CF921DED396900AF6A17 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -165,6 +173,15 @@
 				80344F181DFD921A00A34166 /* Buckets.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		80344F201DFDA18200A34166 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				80344F291DFDA66900A34166 /* Localizable.strings */,
+				80344F2E1DFDA87100A34166 /* Localization.swift */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		8055CF8B1DED394700AF6A17 /* Cell */ = {
@@ -349,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				80344F1C1DFD935400A34166 /* R.generated.swift */,
+				80344F201DFDA18200A34166 /* Localization */,
 				80344F151DFD921A00A34166 /* Font */,
 				80344F171DFD921A00A34166 /* JSON */,
 			);
@@ -482,6 +500,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = 8071EDAF1DDF11BA0082BA50;
 			productRefGroup = 8071EDB91DDF11BA0082BA50 /* Products */;
@@ -504,6 +523,7 @@
 				8071EDC61DDF11BA0082BA50 /* LaunchScreen.storyboard in Resources */,
 				80BC654F1DEE7F1D006695CC /* RightMenuCell.xib in Resources */,
 				80731D451DDF2D1000AE96E5 /* HomeView.xib in Resources */,
+				80344F271DFDA66900A34166 /* Localizable.strings in Resources */,
 				8071EDC31DDF11BA0082BA50 /* Assets.xcassets in Resources */,
 				80344F1A1DFD921A00A34166 /* Buckets.json in Resources */,
 				8055CF911DED395D00AF6A17 /* HeaderView.xib in Resources */,
@@ -694,6 +714,7 @@
 				807D11631DEB5252002622E1 /* CenterView.swift in Sources */,
 				80BC654E1DEE7F1D006695CC /* RightMenuCell.swift in Sources */,
 				8071EDBC1DDF11BA0082BA50 /* AppDelegate.swift in Sources */,
+				80344F2F1DFDA87100A34166 /* Localization.swift in Sources */,
 				8071EDF61DDF13D00082BA50 /* AppRouter.swift in Sources */,
 				80731D391DDF244400AE96E5 /* HomeModule.swift in Sources */,
 				808CFD621DE0794B00C29882 /* User.swift in Sources */,
@@ -746,10 +767,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		80344F291DFDA66900A34166 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80344F281DFDA66900A34166 /* en */,
+				80344F2A1DFDA67400A34166 /* Base */,
+				80344F2D1DFDA6AB00A34166 /* id */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		8071EDBF1DDF11BA0082BA50 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8071EDC01DDF11BA0082BA50 /* Base */,
+				80344F2B1DFDA6AB00A34166 /* id */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -758,6 +790,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8071EDC51DDF11BA0082BA50 /* Base */,
+				80344F2C1DFDA6AB00A34166 /* id */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

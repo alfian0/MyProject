@@ -13,6 +13,8 @@ struct R {
   
   struct file {
     static var bucketsJson: NSURL? { return _R.hostingBundle?.URLForResource("Buckets", withExtension: "json") }
+    static var launchScreenStrings: NSURL? { return _R.hostingBundle?.URLForResource("LaunchScreen", withExtension: "strings") }
+    static var mainStrings: NSURL? { return _R.hostingBundle?.URLForResource("Main", withExtension: "strings") }
     static var rounded_EleganceTtf: NSURL? { return _R.hostingBundle?.URLForResource("Rounded_Elegance", withExtension: "ttf") }
   }
   

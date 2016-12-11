@@ -22,7 +22,7 @@ class RightView: ParallaxController {
         self.refreshControl?.tintColor = UIColor.yellowColor()
         self.tableView.addSubview(self.refreshControl!)
         
-        self.tableView.registerNib(UINib(nibName: "RightMenuCell", bundle: nil), forCellReuseIdentifier: "rightMenuCell")
+        self.tableView.registerNib(R.nib.rightMenuCell.instance, forCellReuseIdentifier: "rightMenuCell")
         self.refreshControl?.addTarget(self, action: #selector(self.refreshAction), forControlEvents: .ValueChanged)
     }
     
