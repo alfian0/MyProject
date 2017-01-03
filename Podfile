@@ -10,7 +10,6 @@ def common_pods
     pod 'AlamofireObjectMapper', '~> 3.0'
     pod 'R.swift', '~> 0.13.0'
     pod 'SlideOutMenu'
-    pod 'ParallaxHeaderView'
 end
 
 def common_test_pods

@@ -32,6 +32,7 @@ class HomeView: ContainerController, IHomeView {
         self.delegate = self
         self.navigationController?.navigationBarHidden = true
         self.presenter.doGetBucket(11345)
+        self.view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
         
 //        self.automaticallyAdjustsScrollViewInsets = true
 //        self.edgesForExtendedLayout = .None
@@ -63,7 +64,9 @@ extension HomeView: ISlideOutMenu {
     }
     
     func setLeftViewController() -> UIViewController? {
-        return UIViewController()
+        let lv = LeftView()
+            lv.presenter = self.presenter
+        return lv
     }
     
     func setRightViewController() -> UIViewController? {

@@ -23,7 +23,7 @@ class HomeInteractor : IHomeInteractor{
     
     func getBuckets(id: Int) {
         self.service.getBuckets(id, success: { (response) in
-            guard let buckets = response?.buckets else {
+            guard let _ = response?.buckets else {
                 self.presenter?.failedGetBucket(NSError.errorWithCode(404, message: "Buckets is empty."))
                 return
             }

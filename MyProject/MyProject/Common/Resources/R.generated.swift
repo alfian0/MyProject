@@ -25,13 +25,46 @@ struct R {
   }
   
   struct image {
-    static var header: UIImage? { return UIImage(named: "header", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var back: UIImage? { return UIImage(named: "back", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var bookmark: UIImage? { return UIImage(named: "bookmark", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var bookmarkFill: UIImage? { return UIImage(named: "bookmark-fill", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var calendar: UIImage? { return UIImage(named: "calendar", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var calendar_sprite: UIImage? { return UIImage(named: "calendar_sprite", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var close: UIImage? { return UIImage(named: "close", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var favorite: UIImage? { return UIImage(named: "favorite", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var favoriteFill: UIImage? { return UIImage(named: "favorite-fill", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var filter: UIImage? { return UIImage(named: "filter", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var grid: UIImage? { return UIImage(named: "grid", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var list: UIImage? { return UIImage(named: "list", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var lock: UIImage? { return UIImage(named: "lock", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var logo: UIImage? { return UIImage(named: "logo", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var menu: UIImage? { return UIImage(named: "menu", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var more: UIImage? { return UIImage(named: "more", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var news: UIImage? { return UIImage(named: "news", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var phone: UIImage? { return UIImage(named: "phone", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var portofolio_0: UIImage? { return UIImage(named: "portofolio_0", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var portofolio_1: UIImage? { return UIImage(named: "portofolio_1", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var portofolio_2: UIImage? { return UIImage(named: "portofolio_2", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var portofolio_3: UIImage? { return UIImage(named: "portofolio_3", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var profile: UIImage? { return UIImage(named: "profile", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var rank: UIImage? { return UIImage(named: "rank", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var refresh: UIImage? { return UIImage(named: "refresh", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var remind: UIImage? { return UIImage(named: "remind", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var search: UIImage? { return UIImage(named: "search", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var share: UIImage? { return UIImage(named: "share", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var user: UIImage? { return UIImage(named: "user", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var user_0: UIImage? { return UIImage(named: "user_0", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var user_1: UIImage? { return UIImage(named: "user_1", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
+    static var user_2: UIImage? { return UIImage(named: "user_2", inBundle: _R.hostingBundle, compatibleWithTraitCollection: nil) }
   }
   
   struct nib {
-    static var headerView: _R.nib._HeaderView { return _R.nib._HeaderView() }
+    static var centerView: _R.nib._CenterView { return _R.nib._CenterView() }
     static var homeView: _R.nib._HomeView { return _R.nib._HomeView() }
-    static var rightMenuCell: _R.nib._RightMenuCell { return _R.nib._RightMenuCell() }
+    static var itemCell: _R.nib._ItemCell { return _R.nib._ItemCell() }
+    static var leftView: _R.nib._LeftView { return _R.nib._LeftView() }
+    static var menuCell: _R.nib._MenuCell { return _R.nib._MenuCell() }
+    static var rightView: _R.nib._RightView { return _R.nib._RightView() }
   }
   
   struct reuseIdentifier {
@@ -75,12 +108,12 @@ struct _R {
   static var hostingBundle: NSBundle? { return NSBundle(identifier: "official.alfian.MyProject") }
   
   struct nib {
-    struct _HeaderView: NibResource {
-      var instance: UINib { return UINib.init(nibName: "HeaderView", bundle: _R.hostingBundle) }
-      var name: String { return "HeaderView" }
+    struct _CenterView: NibResource {
+      var instance: UINib { return UINib.init(nibName: "CenterView", bundle: _R.hostingBundle) }
+      var name: String { return "CenterView" }
       
-      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> HeaderView? {
-        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? HeaderView
+      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> UIView? {
+        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? UIView
       }
       
       func instantiateWithOwner(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> [AnyObject] {
@@ -101,12 +134,51 @@ struct _R {
       }
     }
     
-    struct _RightMenuCell: NibResource {
-      var instance: UINib { return UINib.init(nibName: "RightMenuCell", bundle: _R.hostingBundle) }
-      var name: String { return "RightMenuCell" }
+    struct _ItemCell: NibResource {
+      var instance: UINib { return UINib.init(nibName: "ItemCell", bundle: _R.hostingBundle) }
+      var name: String { return "ItemCell" }
       
-      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> RightMenuCell? {
-        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? RightMenuCell
+      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> ItemCell? {
+        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? ItemCell
+      }
+      
+      func instantiateWithOwner(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> [AnyObject] {
+        return instance.instantiateWithOwner(ownerOrNil, options: optionsOrNil)
+      }
+    }
+    
+    struct _LeftView: NibResource {
+      var instance: UINib { return UINib.init(nibName: "LeftView", bundle: _R.hostingBundle) }
+      var name: String { return "LeftView" }
+      
+      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> UIView? {
+        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? UIView
+      }
+      
+      func instantiateWithOwner(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> [AnyObject] {
+        return instance.instantiateWithOwner(ownerOrNil, options: optionsOrNil)
+      }
+    }
+    
+    struct _MenuCell: NibResource {
+      var instance: UINib { return UINib.init(nibName: "MenuCell", bundle: _R.hostingBundle) }
+      var name: String { return "MenuCell" }
+      
+      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> MenuCell? {
+        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? MenuCell
+      }
+      
+      func instantiateWithOwner(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> [AnyObject] {
+        return instance.instantiateWithOwner(ownerOrNil, options: optionsOrNil)
+      }
+    }
+    
+    struct _RightView: NibResource {
+      var instance: UINib { return UINib.init(nibName: "RightView", bundle: _R.hostingBundle) }
+      var name: String { return "RightView" }
+      
+      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> UIView? {
+        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? UIView
       }
       
       func instantiateWithOwner(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> [AnyObject] {
