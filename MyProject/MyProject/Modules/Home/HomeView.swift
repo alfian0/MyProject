@@ -15,9 +15,11 @@ protocol IHomeView : class {
     func failedToFetch(error: NSError)
 }
 
-class HomeView: ContainerController, IHomeView {
+class HomeView: UIViewController, IHomeView {
 	var presenter: IHomePresenter!
 
+    @IBOutlet weak var appLauncherButton: UIButton!
+    
     init(){
         super.init(nibName: "HomeView", bundle:nil)
     }
@@ -29,18 +31,12 @@ class HomeView: ContainerController, IHomeView {
 	override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.delegate = self
-        self.navigationController?.navigationBarHidden = true
-        self.presenter.doGetBucket(11345)
         self.view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
-        
-//        self.automaticallyAdjustsScrollViewInsets = true
-//        self.edgesForExtendedLayout = .None
-        
-//        let navigationBar: UINavigationBar = (self.navigationController?.navigationBar)!
-//            navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-//            navigationBar.shadowImage = UIImage()
-//            navigationBar.backgroundColor = UIColor.clearColor()
+        appLauncherButton.addTarget(self, action: #selector(launchApp), forControlEvents: .TouchUpInside)
+    }
+    
+    func launchApp() {
+        AppLauncher().launchView()
     }
     
     func showLoading() {
@@ -53,25 +49,5 @@ class HomeView: ContainerController, IHomeView {
     
     func failedToFetch(error: NSError) {
         self.showErrorAlert(error)
-    }
-}
-
-extension HomeView: ISlideOutMenu {
-    func setCenterViewController() -> ICenterViewController {
-        let cv = CenterView()
-            cv.presenter = self.presenter
-        return cv
-    }
-    
-    func setLeftViewController() -> UIViewController? {
-        let lv = LeftView()
-            lv.presenter = self.presenter
-        return lv
-    }
-    
-    func setRightViewController() -> UIViewController? {
-        let rv = RightView()
-            rv.presenter = self.presenter
-        return rv
     }
 }

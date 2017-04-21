@@ -59,12 +59,7 @@ struct R {
   }
   
   struct nib {
-    static var centerView: _R.nib._CenterView { return _R.nib._CenterView() }
     static var homeView: _R.nib._HomeView { return _R.nib._HomeView() }
-    static var itemCell: _R.nib._ItemCell { return _R.nib._ItemCell() }
-    static var leftView: _R.nib._LeftView { return _R.nib._LeftView() }
-    static var menuCell: _R.nib._MenuCell { return _R.nib._MenuCell() }
-    static var rightView: _R.nib._RightView { return _R.nib._RightView() }
   }
   
   struct reuseIdentifier {
@@ -108,74 +103,9 @@ struct _R {
   static var hostingBundle: NSBundle? { return NSBundle(identifier: "official.alfian.MyProject") }
   
   struct nib {
-    struct _CenterView: NibResource {
-      var instance: UINib { return UINib.init(nibName: "CenterView", bundle: _R.hostingBundle) }
-      var name: String { return "CenterView" }
-      
-      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> UIView? {
-        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? UIView
-      }
-      
-      func instantiateWithOwner(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> [AnyObject] {
-        return instance.instantiateWithOwner(ownerOrNil, options: optionsOrNil)
-      }
-    }
-    
     struct _HomeView: NibResource {
       var instance: UINib { return UINib.init(nibName: "HomeView", bundle: _R.hostingBundle) }
       var name: String { return "HomeView" }
-      
-      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> UIView? {
-        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? UIView
-      }
-      
-      func instantiateWithOwner(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> [AnyObject] {
-        return instance.instantiateWithOwner(ownerOrNil, options: optionsOrNil)
-      }
-    }
-    
-    struct _ItemCell: NibResource {
-      var instance: UINib { return UINib.init(nibName: "ItemCell", bundle: _R.hostingBundle) }
-      var name: String { return "ItemCell" }
-      
-      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> ItemCell? {
-        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? ItemCell
-      }
-      
-      func instantiateWithOwner(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> [AnyObject] {
-        return instance.instantiateWithOwner(ownerOrNil, options: optionsOrNil)
-      }
-    }
-    
-    struct _LeftView: NibResource {
-      var instance: UINib { return UINib.init(nibName: "LeftView", bundle: _R.hostingBundle) }
-      var name: String { return "LeftView" }
-      
-      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> UIView? {
-        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? UIView
-      }
-      
-      func instantiateWithOwner(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> [AnyObject] {
-        return instance.instantiateWithOwner(ownerOrNil, options: optionsOrNil)
-      }
-    }
-    
-    struct _MenuCell: NibResource {
-      var instance: UINib { return UINib.init(nibName: "MenuCell", bundle: _R.hostingBundle) }
-      var name: String { return "MenuCell" }
-      
-      func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> MenuCell? {
-        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? MenuCell
-      }
-      
-      func instantiateWithOwner(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> [AnyObject] {
-        return instance.instantiateWithOwner(ownerOrNil, options: optionsOrNil)
-      }
-    }
-    
-    struct _RightView: NibResource {
-      var instance: UINib { return UINib.init(nibName: "RightView", bundle: _R.hostingBundle) }
-      var name: String { return "RightView" }
       
       func firstView(ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]?) -> UIView? {
         return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? UIView
